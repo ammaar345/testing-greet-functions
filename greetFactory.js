@@ -29,13 +29,14 @@ function Greet(initialState) {
     }
 
    
-function countNamesStorage(){
-var namesCount=Object.keys(namesGreeted)
-return namesCount.length;
+function countNamesStorage( nameStore){
+var namesCount=Object.keys(nameStore);
+var countNames=namesCount.length
+return countNames
 }
-function nameStorage(){
-    console.log(namesGreeted);
-    return namesGreeted;
+function nameStorage(names){
+   // console.log(namesGreeted);
+    return names;
 
 
 }

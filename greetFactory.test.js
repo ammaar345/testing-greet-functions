@@ -35,7 +35,7 @@ let greeting=Greet();
     var userName="";
     assert.equal(greeting.validate(language,userName),"Please enter a username.")
    })
-   it ("Should return a message to inform the user to select a language",function(){
+   it ("Should return a message to inform the user to select a language.",function(){
     let greeting=Greet();
 
     var language="";
@@ -44,3 +44,31 @@ let greeting=Greet();
    })
 
 });
+describe("Tests if counting function works correctly.",function(){
+    it("Should count 3 names",function(){
+var names={"Ammaar":1,"John":1,"Timothy":1}
+assert.equal(greet.countNamesStorage(names),3);
+
+    })
+    it("Should count 4 names.",function(){
+    var names= {"Mecayle":1,"Andrew":1,"Lewis":1,"Thabo":1}   
+assert.equal(greet.countNamesStorage(names),4);    
+})
+    it("Should count 1 name.",function(){
+       var names={"Melissa":1} ;
+assert.equal(greet.countNamesStorage(names),1)    })
+})
+describe("Shows the names being stored in the object.",function(){
+    it(" Should return {Ammaar:1,John:1,Timothy:1}",function(){
+        var names={Ammaar:1,John:1,Timothy:1}
+        assert.deepEqual(greet.nameStorage(names),{Ammaar:1,John:1,Timothy:1})
+    })
+    it("Should return {Mecayle:1,Andrew:1,Lewis:1,Thabo:1}",function(){
+        var names= {Mecayle:1,Andrew:1,Lewis:1,Thabo:1}
+        assert.deepEqual(greet.nameStorage(names),{Mecayle:1,Andrew:1,Lewis:1,Thabo:1})
+    })
+    it("Should return {Melissa:1}",function(){
+        var names={Melissa:1} ;
+        assert.deepEqual(greet.nameStorage(names),{Melissa:1})
+    })
+})
